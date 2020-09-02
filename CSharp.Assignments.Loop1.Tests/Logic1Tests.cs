@@ -9,6 +9,7 @@ namespace CSharp.Assignments.Loop1.Tests
 {
     public class Logic1Tests
     {
+        private const string V = "Selection";
 
         [Test]
         [Category("Selection")]
@@ -44,7 +45,7 @@ namespace CSharp.Assignments.Loop1.Tests
         }
 
         [Test]
-        [Category("Selection")]
+        [Category(V)]
         public void Love6()
         {
             Assert.AreEqual(true, Logic1.Love6(6, 4));
