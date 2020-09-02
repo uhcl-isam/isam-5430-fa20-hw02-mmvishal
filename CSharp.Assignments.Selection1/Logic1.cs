@@ -79,7 +79,7 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool Love6(int a, int b)
         {
-            if((a==6) || (b==6) || (a + b == 6) || (a - b == 6))
+            if((a==6) || (b==6) || (a + b == 6) || (Math.Abs(a - b) == 6))
             {
                 return true;
             }
@@ -99,7 +99,7 @@ namespace CSharp.Assignments.Loop1
         public static bool
             More20(int num) //doubt
         {
-            if(num % 20 <=2)
+            if((num % 20 ==2 )|| (num % 20 ==1))
             {
                 return true;
             }
@@ -117,7 +117,10 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool NearTen(int num)
         {
-            throw new NotImplementedException();
+            if (num % 10 == 8 || num % 10 == 9 || num % 10 == 0 || num % 10 == 1 || num % 10 == 2)
+                return true;
+            else
+                return false;
         }
 
         /// <summary>
@@ -172,6 +175,10 @@ namespace CSharp.Assignments.Loop1
                 {
                     result = true;
                 }
+                else
+                {
+                    result = false;
+                }
             }
             else if((temperature>=60) && (temperature<=90))
             {
@@ -207,7 +214,7 @@ namespace CSharp.Assignments.Loop1
                 }
                 else
                 {
-                   x="Off";
+                   x="off";
                 }
             }
             else if (vacation == false)
@@ -272,8 +279,56 @@ namespace CSharp.Assignments.Loop1
         /// <param name="number">Number.</param>
         public static bool IsHilly(int number)
         {
-            throw new NotImplementedException();
+            
+            int x = 0, y = 0, flag=0;
+            if(number>99)
+            {
+                while (number != 0)
+                { 
+                    x = number % 10 ;
+                    number = number / 10;
+                    if (number == 0)
+                     return false;
+                    y = number % 10;
+                    if(flag==0)
+                    {
+                        if (x <= y)
+                        {
+                            flag = -1;
+                        }
+                        else
+                            return false;
+                    }
+                    else if(flag==-1)
+                    {
+                            if (y < x)
+                            {
+                            //return false;
+                            flag = 1;
+                            if (number == y)
+                                return true;
+                            }
+
+                    }
+                    else
+                    {
+                       if(y>x)
+                        {
+                            return false;
+                        }
+                        if (number == y)
+                            return true;
+                    }
+
+                }
+            }
+            else
+            {
+                return false;
+            }
+            return true;
         }
+
 
         /// <summary>
         /// Given three ints, a b c, return true if one of b or c is "close"
@@ -287,8 +342,8 @@ namespace CSharp.Assignments.Loop1
         /// <returns></returns>
         public static bool CloseFar(int a, int b, int c) //doubt
         {
-            return ((Math.Abs(a - b) == 1 && (Math.Abs(a - c) >= 2 && Math.Abs(b - c) >= 2) ||
-                    (Math.Abs(a - c) == 1 && Math.Abs(a - b) >= 2 && Math.Abs(b - c) >= 2)));
+            return ((Math.Abs(a - b) <= 1 && (Math.Abs(a - c) >= 2 && Math.Abs(b - c) >= 2) ||
+                    (Math.Abs(a - c) <= 1 && Math.Abs(a - b) >= 2 && Math.Abs(b - c) >= 2)));
         }
     }
 }
