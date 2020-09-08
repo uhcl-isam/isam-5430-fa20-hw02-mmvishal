@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -18,12 +20,32 @@ namespace CSharp.Assignments.Loop1
     ///     largest: The largest number found so far.
     ///     largest2: The second largest number found so far.
     /// </summary>
+    /// 
+   // [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class LargestNumbers
     {
         public static void Main()
         {
-            // get first number and assign it to variable largest
-            // write your codes here
+            //int couunter = 10, largest = 0, largest1 = 0, number = 0;
+            //while(counter >= 1)
+            //{
+            //  number = Convert.ToInt32(Console.ReadLine());
+            //counter = counter - 1;
+            //if(number>largest)
+            //{
+            //  largest = number;
+            // if(largest>largest1)
+            //{
+            //  largest1 = largest;
+
+            //                    }
+
+            //              }
+
+            //          }
+            //    }
         }
+
+
     }
 }
