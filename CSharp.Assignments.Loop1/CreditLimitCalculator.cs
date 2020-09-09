@@ -25,8 +25,37 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            // read in account number
-            // Enter your sentinel loop here
+            int accnumber;
+            int beginningbalance, totalcharges, totalcredits, creditlimit, accountbalance;
+            Write("Enter Account Number: ");
+            accnumber = int.Parse(Console.ReadLine());
+
+            while(accnumber>0)
+            {
+                Write("Enter Balance at begining of the month: ");
+                beginningbalance = int.Parse(Console.ReadLine());
+                Write("Enter total of all items charged by the customer this month: ");
+                totalcharges = int.Parse(Console.ReadLine());
+                Write("Enter total of all credits applied to the customer’s account this month: ");
+                totalcredits = int.Parse(Console.ReadLine());
+                Write("Enter Credit Limit: ");
+                creditlimit = int.Parse(Console.ReadLine());
+
+                accountbalance = beginningbalance + totalcharges - totalcredits;
+
+                if(accountbalance>creditlimit)
+                {
+                    WriteLine($"New Account Balance: {accountbalance}");
+                    WriteLine("Credit limit Exceeded");
+                }
+                else
+                {
+                    WriteLine($"Account Number:{accnumber}");
+                    WriteLine("Enter Account Number: ");
+                    accnumber = int.Parse(Console.ReadLine());
+                }
+
+            }
         }
     }
 }
