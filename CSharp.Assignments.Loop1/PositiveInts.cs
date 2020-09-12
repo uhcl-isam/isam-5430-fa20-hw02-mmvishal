@@ -11,9 +11,10 @@ namespace CSharp.Assignments.Loop1
         /// </summary>
         public static void Main()
         {
-            Console.WriteLine("Enter Value of n: ");
+            int n = 0;
+            Console.Write("Enter Value of n: ");
             //string ninput = Console.ReadLine();
-            int n = Convert.ToInt32(Console.ReadLine());
+            n = int.Parse(Console.ReadLine());
             if (n>0)
             {
                 for(int i=1;i<=n;i++)
@@ -23,7 +24,7 @@ namespace CSharp.Assignments.Loop1
             }
             else
             {
-                Console.WriteLine("");
+                Console.WriteLine(" ");
             }
         }
     }
