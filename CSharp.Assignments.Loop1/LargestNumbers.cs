@@ -21,47 +21,41 @@ namespace CSharp.Assignments.Loop1
     ///     largest2: The second largest number found so far.
     /// </summary>
     /// 
-   // [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
+    // [DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
     public class LargestNumbers
     {
         public static void Main()
         {
-            // get first number and assign it to variable largest
-            // write your codes here
+            int number;
+            int counter = 1;
 
+            int tempValue = 0;
+            int largest = int.MinValue;
+            int secondLargest = int.MinValue;
 
-            int counter = 0;
-            int number = 0;
-            int largest = 0;
-            int second = 0;
+            //Console.WriteLine("Enter number to determine the first and second largest number: ");
 
-            for (counter = 0; counter < 10; counter++)
+            while (counter <= 10)
             {
-               // Console.WriteLine("Enter the integer: ");
                 number = int.Parse(Console.ReadLine());
 
+                if (number >= largest)
                 {
-                    if (counter == 0)
-                    {
-                        largest = number;
-                    }
-                    else
-                    {
-                        if (number > largest)
-                        {
-                            largest = number;
-                        }
-                        if (number > second && number < largest)
-                        {
-                            second = number;
-                        }
-                    }
-                }
-            }
+                    tempValue = largest;
+                    largest = number;
+                    secondLargest = tempValue;
 
+                }
+                else if (number >= secondLargest)
+                {
+                    secondLargest = number;
+                }
+
+                counter++;
+            }
             Console.WriteLine(largest);
-            Console.WriteLine(second);
+            Console.WriteLine(secondLargest);
+            Console.WriteLine(counter);
         }
     }
-
 }
