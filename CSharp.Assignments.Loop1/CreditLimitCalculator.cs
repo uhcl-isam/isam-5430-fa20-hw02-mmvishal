@@ -43,9 +43,10 @@ namespace CSharp.Assignments.Loop1
 
                 accountbalance = beginningbalance + totalcharges - totalcredits;
 
-                if(accountbalance>creditlimit)
+                WriteLine($"New Account Balance: {accountbalance}");
+
+                if (accountbalance>creditlimit)
                 {
-                    WriteLine($"New Account Balance: {accountbalance}");
                     WriteLine("Credit limit Exceeded");
                 }
                 else

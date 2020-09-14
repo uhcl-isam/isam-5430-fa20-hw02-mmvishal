@@ -29,8 +29,60 @@ namespace CSharp.Assignments.Loop1
             Console.Error.WriteLine("Enter the number of lines.");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            // Write your codes here.
-            Console.ReadLine();
+
+            //Console.ReadLine();
+            switch (t)
+            {
+
+                case 'a':
+                    for (int i = 1; i <= n; i++)
+                    {
+                        for (int j = i; j > 0; j--)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.WriteLine("");
+                    }
+                    break;
+                case 'b':
+                    for (int i = n; i >= 1; i--)
+                    {
+                        for (int j = i; j > 0; j--)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.WriteLine("");
+                    }
+                    break;
+                case 'c':
+                    for (int i = 0; i < n; i++)
+                    {
+                        for (int j = 0; j < i; j++)
+                        {
+                            Console.Write(" ");
+                        }
+                        for (int j = 0; j < n - i; j++)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.WriteLine("");
+                    }
+                    break;
+                case 'd':
+                    for (int i = 1; i <= n; i++)
+                    {
+                        for (int j = 1; j <= n - i; j++)
+                        {
+                            Console.Write(" ");
+                        }
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write("*");
+                        }
+                        Console.WriteLine("");
+                    }
+                    break;
+            }
         }
     }
 }

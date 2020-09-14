@@ -17,6 +17,7 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+
         }
     }
 }

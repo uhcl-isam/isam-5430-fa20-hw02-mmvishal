@@ -12,12 +12,35 @@ namespace CSharp.Assignments.Loop1
     {
         public static void Main()
         {
-            Console.WriteLine("Enter the last number of Fibonacci Sequence of numbers.");
-            int end = int.Parse(Console.ReadLine());
-            for(int i=0; i<end;i++)
+            int x = int.Parse(Console.ReadLine());
+            int a = 0, b = 1, c = 0;
+            if (x == 0)
             {
-                
+                Console.WriteLine(0);
+
             }
+            else if (x == 2)
+            {
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+            }
+            else if (x > 2)
+            {
+                Console.WriteLine(a);
+                Console.WriteLine(b);
+                for (int i=0; i < x-2 ;i++)
+                {
+                    c = a + b;
+                    a = b;
+                    b = c;
+                    Console.WriteLine(c);
+                }
+
+            }
+            //else
+            //{
+              //  Console.WriteLine("Invalid");
+            //}
 
         }
     }

@@ -27,13 +27,13 @@ namespace CSharp.Assignments.Loop1
         {
             int i = 0;
 
-            Console.Write("Enter the number of rows: ");
+            Console.Error.Write("Enter the number of rows: ");
             int num = int.Parse(Console.ReadLine());
-            Console.Write("Enter the fill character: ");
+            Console.Error.Write("Enter the fill character: ");
             char fillChar = Char.Parse(Console.ReadLine());
             while (i < num)
             {
-                if (i % 2 == 0)
+                if (i % 2 != 0)
                     Console.Write(" ");
                 int j = 0;
 

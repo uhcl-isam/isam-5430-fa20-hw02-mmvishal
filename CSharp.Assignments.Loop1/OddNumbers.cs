@@ -23,12 +23,9 @@ namespace CSharp.Assignments.Loop1
             {
                 if(i%2 != 0)
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine($"{i}");
                 }
-                else
-                {
-                    Console.WriteLine("");
-                }
+               
             }
         }
     }
